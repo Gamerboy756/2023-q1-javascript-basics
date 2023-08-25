@@ -14,11 +14,14 @@ let howOften = [
 ];
 
 let verbs = [
-    "run with",
-    "swim in",
-    "eat",
-    "climb",
-    "dance with"
+    "run with a",
+    "swim with a",
+    "eat a",
+    "climb a",
+    "dance with a",
+    "annihilate a",
+    "destroy a",
+    "terrify a"
 ]
 
 let adjectives = [
@@ -34,15 +37,14 @@ let adjectives = [
 ];
 
 let nouns = [
-    "elephants",
-    "humans",
-    "chainsaws",
-    "nuclear bombs",
-    "computers",
-    "commuters",
-    "goatskin",
-    "wealth",
-    "serpents",
+    "elephant",
+    "human",
+    "chainsaw",
+    "nuclear bomb",
+    "computer",
+    "commuter",
+    "wealthy man",
+    "serpent",
     "chariot",
     ""
 ];
@@ -68,3 +70,6 @@ generateAdvice(advisors, howOften, verbs, adjectives, nouns)
 //a wise man once told me, undefined dance with scary.
 
 //My Uncle Rupert always says,  (4) ['never ', 'always ', 'as often as you can, ', 'never ever '] swim in  spicy  computers 
+
+//a wise man once told me, as often as you can, climb scary chainsaws
+
