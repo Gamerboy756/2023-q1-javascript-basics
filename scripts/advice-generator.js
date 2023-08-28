@@ -1,3 +1,6 @@
+let btn = document.getElementById("advice-button")
+let output = document.getElementById("advice")
+
 let advisors = [
     "a wise man once told me,",
     "Mother always says,",
@@ -67,6 +70,15 @@ let generateAdvice = function (adv, h, v, adj, n) {
 }
 
 generateAdvice(advisors, howOften, verbs, adjectives, nouns)
+
+let generateDefaultSettings = function () {
+
+    generateAdvice(advisors, howOften, verbs, adjectives, nouns)
+}
+btn.addEventListener("click", function () {
+    //console.log("clicked!");
+    generateDefaultSettings()
+})
 //a wise man once told me, undefined dance with scary.
 
 //My Uncle Rupert always says,  (4) ['never ', 'always ', 'as often as you can, ', 'never ever '] swim in  spicy  computers 
