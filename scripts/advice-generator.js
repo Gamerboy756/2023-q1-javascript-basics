@@ -61,12 +61,14 @@ let getRandomIndex = function (a) {
 
 
 let generateAdvice = function (adv, h, v, adj, n) {
-    console.log(
-        getRandomIndex(adv),
-        getRandomIndex(h),
-        getRandomIndex(v),
-        getRandomIndex(adj),
-        getRandomIndex(n))
+    let randomAdvice =
+        getRandomIndex(adv) + " "
+    getRandomIndex(h), + " "
+    getRandomIndex(v), + " "
+    getRandomIndex(adj), + " "
+    getRandomIndex(n)
+    console.log(randomAdvice)
+    return randomAdvice
 }
 
 generateAdvice(advisors, howOften, verbs, adjectives, nouns)
@@ -76,8 +78,8 @@ let generateDefaultSettings = function () {
     generateAdvice(advisors, howOften, verbs, adjectives, nouns)
 }
 btn.addEventListener("click", function () {
-    //console.log("clicked!");
-    generateDefaultSettings()
+    let advice = generateAdvice(advisors, howOften, verbs, adjectives, nouns)
+    output.textContent = advice
 })
 //a wise man once told me, undefined dance with scary.
 
