@@ -36,6 +36,7 @@ let adjectives = [
     "odd",
     "loud",
     "scary",
+    "uhh... idk.. a"
 
 ];
 
@@ -49,7 +50,7 @@ let nouns = [
     "wealthy man",
     "serpent",
     "chariot",
-    ""
+    ".. uhhhh... I forgor"
 ];
 
 let getRandomIndex = function (a) {
@@ -62,11 +63,11 @@ let getRandomIndex = function (a) {
 
 let generateAdvice = function (adv, h, v, adj, n) {
     let randomAdvice =
-        getRandomIndex(adv) + " "
-    getRandomIndex(h), + " "
-    getRandomIndex(v), + " "
-    getRandomIndex(adj), + " "
-    getRandomIndex(n)
+        getRandomIndex(adv) + " " +
+        getRandomIndex(h) + " " +
+        getRandomIndex(v) + " " +
+        getRandomIndex(adj) + " " +
+        getRandomIndex(n)
     console.log(randomAdvice)
     return randomAdvice
 }

@@ -31,3 +31,33 @@ console.log(fruits)
 console.log(typeof (fruits))
 //prints "object"
 
+//objects have properties and methods
+
+let classroom = {
+
+    roomNumber: 129,
+    seats: 35,
+    teacher: {
+        firstName: "Robert",
+
+        lastName: "Hardy",
+    },
+
+    students: [
+        { firstName: "Cade", lastName: "Arney", grade: 8 },
+
+        { firstName: "Lana", lastName: "Krakow", grade: 8 }
+    ],
+    lightsOn: true,
+    turnLightsOff: function () {
+
+        this.lightsOn = false;
+        return;
+    }
+};
+
+console.log(typeof (turnLightsOff));
+
+classroom.turnLightsOff()
+
+console.log(classroom);
