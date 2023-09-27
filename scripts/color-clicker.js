@@ -8,13 +8,22 @@ const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 600;
 
+/** @type {HTMLCanvasElement} */
+//@ts-ignore canvas is an HTMLCanvasElement
+const scoreCanvas = document.getElementById("score-canvas");
+/** @type {CanvasRenderingContext2D} */
+//@ts-ignore we know ctx is not null
+const scoreCtx = canvas.getContext("2d");
+canvas.width = 800;
+canvas.height = 60;
+
 
 class ClickShape {
     constructor() {
         this.x = 0;
         this.y = 0;
 
-        this.width = 5;
+        this.width = 100;
 
         this.xDirection = 0;
         this.yDirection = 1;
@@ -111,20 +120,22 @@ class Game {
         if (this.lastSpawnTime < this.spawnInterval) {
             return;
         } //go away
+
         this.lastSpawnTime = 0;
 
         let s = new ClickShape();
         s.color = this.getRandomColor();
         s.y = 0 - s.width;
 
-        //this will give us a number between 0 and 70
-        let randX = Math.floor(Math.random() * ((canvas.width / s.width) - s.width));
+        let randX = Math.floor(Math.random() * ((canvas.width / s.width)));
         s.x = randX * s.width;
         this.shapes.push(s);
     }
     update(elapsedTime) {
         this.spawnShape(elapsedTime)
         this.shapes.forEach((s) => { s.update(); })
+        this.shapes = this.shapes.filter(s => s.isVisible);
+        console.log("length of shapes" + this.shapes.length);
     }
 
     draw() {
@@ -147,4 +158,10 @@ let gameLoop = function (timestamp) {
 
 };
 
+console.log("hi :) welcome to my little thing !")
+
 window.requestAnimationFrame(gameLoop);
+
+canvas.addEventListener("click", (ev) => {
+
+})
